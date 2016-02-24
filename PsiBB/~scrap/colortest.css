@@ -1,0 +1,123 @@
+
+*
+{
+    box-sizing: border-box;
+}
+
+.icon
+{
+    margin: 32px;
+}
+.icon > *
+{
+    transform-origin: left top;
+}
+
+.circle
+{
+    border-radius: 9999px;
+}
+.circle.ignore
+{
+    background-color: #D40000;
+    height: 130px;
+    width: 130px;
+    
+    box-shadow: 3px 4px 4px rgba(11, 12, 13, 0.5);
+    /*box-shadow: 3px 4px 4px rgba(11, 12, 13, 0.56640625);*/
+    /*box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.56640625);*/
+}
+
+.dash
+{
+    background-color: white;
+    height: 32px;
+    width: 102px;
+    border-radius: 4px;
+    position: relative;
+    top: 49px;
+    margin-left: 14px;
+    
+    box-shadow: 2px 3px 3px rgba(11, 12, 13, 0.232);
+}
+
+#icon256
+{
+    height: 256px;
+    width: 256px;
+    background-image: url("icon256.png");
+    
+    padding-top: 63px;
+    padding-left: 62px;
+}
+
+#icon48
+{
+    height: 48px;
+    width: 48px;
+    background-image: url("icon48.png");
+    
+    padding-top: 15px;
+    padding-left: 12px;
+}
+#icon48 .circle.ignore
+{
+    transform: scale(0.18461538461538461538461538461538, 0.18461538461538461538461538461538);
+}
+
+#icon32
+{
+    height: 32px;
+    width: 32px;
+    background-image: url("icon32.png");
+    
+    padding-top: 11px;
+    padding-left: 8px;
+}
+#icon32 .circle.ignore
+{
+    transform: scale(0.11923076923076923076923076923077, 0.11923076923076923076923076923077);
+}
+
+#icon16
+{
+    height: 16px;
+    width: 16px;
+    background-image: url("icon16.png");
+    
+    padding-top: 5px;
+    padding-left: 4px;
+}
+#icon16 .circle.ignore
+{
+    /*transform: scale(0.064705882352941176470588235294118, 0.064705882352941176470588235294118);*/
+    transform: scale(0.069230769230769230769230769230769, 0.069230769230769230769230769230769);
+    
+    border-radius: 0;
+}
+
+
+
+#hack256
+{
+    height: 256px;
+    width: 256px;
+    background-image: url("hack256.png");
+}
+
+#hack256 .circle
+{
+    background-color: #9A1D1D;
+    height: 244px;
+    width: 244px;
+    /*border: 11px solid #B4B4B9;*/
+    
+    position: relative;
+    right: -100%;
+    top: 3px;
+    
+    box-shadow: 0 0 0 1px #5B5A5A inset,
+                0 0 0 11px #B4B4B9 inset,
+                3px 3px 3px rgba(0, 0, 0, 0.337);
+    /*box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.337);*/
+}

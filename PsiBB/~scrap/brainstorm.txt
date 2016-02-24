@@ -1,0 +1,8 @@
+
+? Modify (I)SpeakerRepository from https://github.com/spboyer/mongomvc into a general ORM of sorts that can work with any model using generics.
+  • For `name` parameter of IMongoDatabase.GetCollection, add static field `CollectionName` to all models (make an interface?) and access with: typeof(T).GetField("CollectionName")
+    ? This might be "evil".  Care?
+? How much info does app get on validation failure?
+? Implement associations using C# attributes?
+  • Attribute(s) should also indicate what NOT to save to the database (so full user profile data doesn't get duplicated into every post they make, for instance)
+    (Seems like a thing that might be built-in, look for it)

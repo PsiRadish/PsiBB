@@ -1,0 +1,805 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Comment",
+				"CommentStrings"
+			],
+			[
+				"html",
+				"html	html w/ jQuery(+UI) and Bootstrap"
+			],
+			[
+				"backg",
+				"background-image"
+			],
+			[
+				"file",
+				"filePaths"
+			],
+			[
+				"Wr",
+				"Write-Host"
+			],
+			[
+				"tex",
+				"texFilePath"
+			],
+			[
+				"dds",
+				"ddsBytes"
+			],
+			[
+				"dwF",
+				"dwFourCC"
+			],
+			[
+				"margin",
+				"margin-right: "
+			],
+			[
+				"backgr",
+				"background-color: "
+			],
+			[
+				"padd",
+				"padding-top: "
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"ro",
+				"roll_history"
+			],
+			[
+				"gr",
+				"greet"
+			],
+			[
+				"R",
+				"R66Y"
+			],
+			[
+				"fi",
+				"first_name"
+			],
+			[
+				"play",
+				"player2Score"
+			],
+			[
+				"move",
+				"movesMade"
+			],
+			[
+				"eve",
+				"eventData"
+			],
+			[
+				"newS",
+				"newSquares"
+			],
+			[
+				"doo",
+				"doomedQuark"
+			],
+			[
+				"vM",
+				"vMatchSquares"
+			],
+			[
+				"colM",
+				"colMatch"
+			],
+			[
+				"squ",
+				"squareA"
+			],
+			[
+				"direc",
+				"directionToSkip"
+			],
+			[
+				"match",
+				"matchingQuarks"
+			],
+			[
+				"swapD",
+				"swapDirectionB"
+			],
+			[
+				"stre",
+				"stretchMargin"
+			],
+			[
+				"sq",
+				"squareA"
+			],
+			[
+				"ani",
+				"animating"
+			],
+			[
+				"clic",
+				"clickedCoords"
+			],
+			[
+				"qu",
+				"quark"
+			],
+			[
+				"q",
+				"quark"
+			],
+			[
+				"ol",
+				"oldTurn"
+			],
+			[
+				"new",
+				"newTurn"
+			],
+			[
+				"sel",
+				"selected"
+			],
+			[
+				"cl",
+				"clickedQuark"
+			],
+			[
+				"bo",
+				"boardSelector"
+			],
+			[
+				"gameA",
+				"gameAreaSelector"
+			],
+			[
+				"gra",
+				"gravUp"
+			],
+			[
+				"newT",
+				"newTaskInput"
+			],
+			[
+				"matchd",
+				"matchDiagonalDown"
+			],
+			[
+				"matchT",
+				"matchThirdColumn"
+			],
+			[
+				"matchS",
+				"matchSecondColumn"
+			],
+			[
+				"matchD",
+				"matchDiagonalUp"
+			],
+			[
+				"matchF",
+				"matchFirstColumn"
+			],
+			[
+				"mat",
+				"matchThirdColumn"
+			],
+			[
+				"conver",
+				"convertForm"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"merg",
+				"mergedArray"
+			],
+			[
+				"prime",
+				"primesList"
+			],
+			[
+				"rever",
+				"reverseMe"
+			],
+			[
+				"comp",
+				"computerWins"
+			],
+			[
+				"compu",
+				"computerMove"
+			],
+			[
+				"pl",
+				"playerMove"
+			],
+			[
+				"ran",
+				"randomPlay"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"resou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"vbsc",
+				"Set Syntax: VBScript"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"power",
+				"Set Syntax: PowerShell"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"css",
+				"Set Syntax: SCSS"
+			],
+			[
+				"packagec",
+				"Package Control: Install Package"
+			],
+			[
+				"new view",
+				"File: New View into File"
+			],
+			[
+				"pack",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"AAA",
+				"z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
+			],
+			[
+				"packave",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"packagev",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"view",
+				"File: New View into File"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"for",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"packager",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"unfold",
+				"Code Folding: Unfold All"
+			],
+			[
+				"indent",
+				"BracketHighlighter: Fold Bracket Content"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 114.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/M/Radish/Dev/Web/ASP.NET/PsiBB"
+	],
+	"file_history":
+	[
+		"/M/Radish/Dev/Web/ASP.NET/PsiBB/~scrap/colortest.html",
+		"/M/Radish/Computer Stuff/Registry Stuff/export/00export.reg",
+		"/M/Radish/Run/MongoDB.bat",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/JavaScript/JavaScript.tmLanguage",
+		"/M/Radish/Icons/Aero/WiP[v7]/browser comp/iconing.css",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/User/Color Schemes/Radish.tmTheme",
+		"/M/Radish/Dev/Visual Studio/ItalicComments/ViewCreationListener.cs",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/C#/C#.tmLanguage",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/XML/XML.tmLanguage",
+		"/M/Radish/Dev/Web/ASP.NET/PsiBB/~scrap/XML Doc.tmLanguage",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/HTML/HTML.tmLanguage",
+		"/C/Users/Radish/Downloads/Dev/solesby.dsm",
+		"/M/Radish/Dev/Web/ASP.NET/PsiBB/~scrap/iconing.html",
+		"/M/Radish/Dev/Web/ASP.NET/PsiBB/~scrap/iconing.css",
+		"/M/Radish/Dev/Game Modding/Titan Quest/extracted/dye_aalsafyshs_fishnetty.dbr",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/AddonSaveData/psifbbja15j/Perspective_0_Acct.xml",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity.Eras Hornly.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity-2.Eras Hornly.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity.Helga Rosegale.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity-2.Helga Rosegale.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity-2.Mad Zuzu.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity.Mad Zuzu.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity.Rada Katnev.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity-2.Rada Katnev.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Realm.psiradish@comcast.net.Entity.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Realm.psiradish@comcast.net.Entity-2.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/Character.psiradish@comcast.net.Entity-2.Mad Zuzu.bdbabbbb2bdbd3ff.ini",
+		"/C/Users/Radish/AppData8/Roaming/NCSOFT/WildStar/AddonSaveData/psifbbja15j/Perspective_0_Acct.xml.backup",
+		"/M/Radish/Dev/Game Modding/Titan Quest/extracted/allskins.map",
+		"/M/Radish/Run/7z.bat",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+		"/M/Radish/Run/touch.bat",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150728194745_create_people_toppings.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150729041731_topping_uniqueness.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150729022834_more_people_toppings_tables_plz.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/app/models/people_hate_toppings.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/app/models/people_meh_toppings.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/app/models/people_want_toppings.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/app/assets/stylesheets/reference.bootswatch/lumen/_bootswatch.scss",
+		"/M/Radish/Dev/GA_WDI/peazza/app/assets/stylesheets/reference.bootswatch/lumen/_variables.scss",
+		"/M/Radish/Dev/GA_WDI/peazza/app/models/account.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150728105521_create_toppings.rb",
+		"/M/Radish/Dev/GA_WDI/bootstrap-sass-master/assets/stylesheets/bootstrap/_navbar.scss",
+		"/M/Radish/Dev/GA_WDI/peazza/app/models/friendship.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/app/models/account/friendship.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/app/assets/javascripts/application.js",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150728171443_create_friendships.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/config/routes.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150728103630_create_users.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/db/migrate/20150728111612_rename_user.rb",
+		"/M/Radish/Dev/GA_WDI/link_board/app/models/user.rb",
+		"/M/Radish/Dev/GA_WDI/peazza/Gemfile",
+		"/M/Radish/Dev/GA_WDI/peazza/app/assets/stylesheets/disable.bootswatch/lumen/_variables.scss",
+		"/M/Radish/Dev/GA_WDI/peazza/app/assets/stylesheets/bootswatch/lumen/_bootswatch.scss",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/Bootstrap 3 Snippets/cdn/bs3-cdn-css.sublime-snippet",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/Bootstrap 3 Snippets/cdn/bs3-cdn-js.sublime-snippet",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/Bootstrap 3 Snippets/cdn/bs3-cdn.sublime-snippet",
+		"/M/Radish/Dev/GA_WDI/peazza/app/assets/stylesheets/_bootswatch.scss",
+		"/M/Radish/Dev/GA_WDI/bootstrap-sass-master/assets/stylesheets/_bootstrap.scss",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/CSS/CSS.tmLanguage",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+		"/C/Users/Radish/AppData8/Roaming/Sublime Text 3/Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage.new",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/assets/stylesheets/application.css",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/controllers/creatures_controller.rb",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/views/creatures/new.html.erb",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/views/creatures/show.html.erb",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/views/creatures/index.html.erb",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/views/home/index.html.erb",
+		"/M/Radish/Dev/GA_WDI/bog_app/app/views/layouts/application.html.erb",
+		"/M/Radish/Dev/GA_WDI/bog_app/config/routes.rb",
+		"/M/Radish/Dev/GA_WDI/bog_app/config/database.yml",
+		"/M/Radish/AppData8/Roaming/Sublime Text 3/Packages/JavaScript/JavaScript.tmLanguage",
+		"/M/Radish/AppData8/Roaming/Sublime Text 3/Packages/Ruby/Ruby.tmLanguage",
+		"/M/Radish/AppData8/Roaming/Sublime Text 3/Packages/HTML/HTML.tmLanguage",
+		"/M/Radish/AppData8/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/M/Radish/AppData8/Roaming/Sublime Text 3/Packages/User/Color Schemes/Radish.tmTheme",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/index.html",
+		"/C/Users/Radish/Dev/syntax colors.txt",
+		"/C/Users/Radish/Dev/GA_WDI/in-class/Week03/rspec_cherry/classes.rb",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/js/game.js",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/JavaScript/JavaScript.JSON-tmLanguage",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/User/Color Schemes/Radish.JSON-tmTheme",
+		"/C/Users/Radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week03/hw_ruby_classes_intro/classes.rb",
+		"/C/Users/Radish/Dev/GA_WDI/in-class/flatten.js",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/js/script.js",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/css/style.css",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/js/jquery.fittext.js",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/js/css.js",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/js/jquery.fittext.RAD.js",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/js/constants.js",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/script/grid.js",
+		"/C/Users/Radish/Dev/GA_WDI/Bequarked/grid.js",
+		"/C/Users/Radish/Dev/GA_WDI/Begrav'd/grid.js",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/JavaScript/for-()-{}-(faster).sublime-snippet",
+		"/C/Users/Radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week02/hw_reddit_ajax_slideshow/js/script.js",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/JavaScript/for-()-{}.sublime-snippet",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/User/for-()-{}.sublime-snippet",
+		"//Booboo/Dev/GA_WDI/in-class/Week02/API/index.html",
+		"//Booboo/Dev/GA_WDI/in-class/Week02/API/script.js",
+		"//Booboo/Dev/GA_WDI/in-class/Week02/API/style.css",
+		"//Booboo/Dev/GA_WDI/in-class/Week02/jquery-ui/index.html",
+		"//Booboo/Dev/GA_WDI/in-class/Week02/jquery-ui/script.js",
+		"//Booboo/Dev/GA_WDI/in-class/Week02/jquery-ui/style.css",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Radish/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Radish/Dev/GA_WDI/in-class/Week02/jquery-ui/style.css",
+		"/C/Users/Radish/Dev/GA_WDI/in-class/Week02/jquery-ui/index.html",
+		"/C/Users/Radish/Dev/GA_WDI/in-class/Week02/jquery-ui/script.js",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week02/hw_jquery_todo/index.html",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week02/hw_jquery_todo/script.js",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week02/hw_jquery_todo/style.css",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week02/hw_jquery_todo/truthcheck.html",
+		"/home/radish/Dev/GA_WDI/in-class/Week02/bootstrap/index.html",
+		"/home/radish/Dev/GA_WDI/in-class/Week02/bootstrap/mockup1.css",
+		"/home/radish/Dev/GA_WDI/in-class/Week02/jQuery/index.html",
+		"/home/radish/Dev/GA_WDI/in-class/Week02/bootstrap/mockup1.html",
+		"/home/radish/Dev/GA_WDI/in-class/Week02/jQuery/script.js",
+		"/home/radish/Dev/GA_WDI/in-class/Week02/jQuery/style.css",
+		"/home/radish/Dev/GA_WDI/in-class/Week01/bootstrap/mockup1.html",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week01/tic_tac_toe/script.js",
+		"/home/radish/Dev/GA_WDI/in-class/Week01/bootstrap/mockup1.css",
+		"/home/radish/Dev/GA_WDI/in-class/Week01/bootstrap/index.html",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week01/hw_temp_convert/index.html",
+		"/home/radish/Dev/GA_WDI/WDI_SEA_03_HOMEWORK/PsiRadish/Week01/hw_temp_convert/style.css"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"OpenVS",
+			"Open",
+			"array",
+			"entity.name.tag",
+			"0000FF",
+			"entity.name.tag",
+			"&lt;",
+			"&gt;",
+			"entity.name.tag",
+			"key-value",
+			"entity.other.attribute-name",
+			"\\.xml<",
+			"entity.name.tag",
+			"meta.tag",
+			"tag",
+			"html",
+			"doublequotedString",
+			".html",
+			"key-value",
+			"source.xmldoc",
+			".xmldoc",
+			"Plan Document Highlight",
+			"entity.other.attribute-name.id",
+			"\\.xml<",
+			".xml<",
+			"doc",
+			"this",
+			"parameters",
+			"arguments",
+			">\\{<",
+			"\\{",
+			":",
+			"void",
+			".js",
+			"\\bkeywords\\b",
+			"operator",
+			"punctuation",
+			"punctuation\\.definition",
+			"punctuation",
+			"punctuation\\.definition\\.([^.]+)?parameters",
+			"punctuation",
+			"operator",
+			"dsCPP",
+			"FileType\\(|TypeOfFile",
+			"FileType\\(||TypeOfFile",
+			"FileType\\(",
+			"CSS",
+			"#(?!FF)\\w\\wFFFF",
+			"#FF(?!FF)\\w\\wFF",
+			"class",
+			"document",
+			"class",
+			"064705882352941176470588235294118",
+			"11923076923076923076923076923077",
+			"32",
+			"48",
+			"0.11538461538461538461538461538462",
+			"18461538461538461538461538461538",
+			"17647058823529411764705882352941",
+			"1",
+			"256",
+			"icon256",
+			"Entity-2",
+			"bmp",
+			"magicFound",
+			"magicRequired",
+			"filePath",
+			"$filePath",
+			"$i",
+			"dwFlags_b",
+			"dwLinearSize_b",
+			"dwFlags_b",
+			"dwFlags",
+			"ddsOffset",
+			"1",
+			"scriptblock",
+			"block",
+			"@",
+			"\\@",
+			"<key>",
+			"navbar",
+			"font",
+			"Need",
+			" !default",
+			"font",
+			"$grid-float-breakpoint",
+			"breakpoint",
+			"well",
+			"navbar",
+			"navbar-default-color",
+			"navbar",
+			"nav",
+			"&gt;",
+			":",
+			"keyword",
+			"property-(name|value)",
+			"propert-value",
+			",",
+			"constant",
+			"match",
+			"}",
+			"operator",
+			",",
+			"operator",
+			",",
+			"meta.property-list.css.sass",
+			"operator",
+			"font-weight",
+			"entity.other.attribute-name.id",
+			"#[^\\w]",
+			"#",
+			"<!--",
+			"at-rule",
+			"solid",
+			"@",
+			"support",
+			"support.function",
+			"support",
+			"@",
+			"variable.other",
+			"entity\\b",
+			"entity",
+			"variable.other",
+			"constant",
+			"numeric",
+			"px",
+			"operator",
+			"punctuation"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+			".xmldoc<",
+			"Entity",
+			"Want",
+			"Meh",
+			"Hate",
+			"",
+			"Starlight",
+			"Noba",
+			"gameSquares",
+			"removeMatches",
+			"neighboorInDir",
+			"up",
+			"B",
+			"arrOfSquares",
+			"findMatchesTo",
+			"dirToSkip\\1 = ",
+			"findMatchesInDirTo",
+			"grav-container",
+			"currSquare",
+			"makeGridKey",
+			"CSS",
+			"ring-red ",
+			"ring-red",
+			"my-turn",
+			"Blue",
+			"\\1",
+			";\n    ",
+			"\n{",
+			"p",
+			"<span>This is an awesome product one description.</span>",
+			"outputImage.src",
+			"ramaItems",
+			"",
+			", ",
+			"",
+			"numInput",
+			"num",
+			"letter",
+			"temp",
+			"argv[3]",
+			"pluralMe",
+			"console.log",
+			"\",\"",
+			"\\1\n",
+			"```\n//// ANSWER ////",
+			"```\n**ANSWER**",
+			"    \\1 : \\2,",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.package_dev":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "",
+	"project": "PsiBB.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
