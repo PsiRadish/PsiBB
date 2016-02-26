@@ -1,0 +1,10 @@
+﻿
+#menu-bar > ul.menu
+{
+    list-style: none;
+}
+
+#menu-bar > ul.menu > li
+{
+    display: inline-block;
+}

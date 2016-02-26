@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>@System.Configuration.ConfigurationManager.AppSettings["boardName"] – @ViewBag.Title</title>
+    <link href='@Url.Content("~/Public/css/PsiBB.css")' rel="stylesheet" type="text/css"/>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <nav id="menu-bar">
+        <ul class="menu">
+          <li>@Html.ActionLink("Home", "Index", "Home")</li>
+          <li>@Html.ActionLink("OMG", "Index", "OMG")</li>
+        </ul>
+      </nav>
+      <div id="header">
+        <div id="title">
+          <h1>@ViewBag.Title</h1>
+        </div>
+        @*<div id="logindisplay">
+          Welcome <strong>@User.Identity.Name</strong>!
+        </div>*@
+      </div>
+      
+      <main>
+        @RenderBody()
+      </main>
+      
+      <div id="footer">
+      </div>
+    </div>
+  </body>
+</html>
