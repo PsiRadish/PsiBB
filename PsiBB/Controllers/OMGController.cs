@@ -20,8 +20,17 @@ namespace PsiBB.Controllers
  
         // 
         // GET: /OMG/Louder/
-        public ActionResult Louder()
+        public ActionResult Louder(int volume=1)
         {
+            string exclamationPoints = "";
+
+            for (int i = 0; i < volume; i++)
+            {
+                exclamationPoints += "!";
+            }
+
+            ViewBag.exclamationPoints = exclamationPoints;
+
             return View();
         }
         // public string Louder() 
