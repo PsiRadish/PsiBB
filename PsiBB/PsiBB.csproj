@@ -109,15 +109,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OMGController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="DataAccess\IHasTimestamps.cs" />
     <Compile Include="DataAccess\Layer.cs" />
-    <Compile Include="DataAccess\MongoModel.cs" />
+    <Compile Include="DataAccess\Mongo.cs" />
     <Compile Include="DataAccess\IModelRepository.cs" />
     <Compile Include="DataAccess\MongoRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Topic.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -129,6 +133,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\OMG\Index.cshtml" />
     <Content Include="Views\OMG\Louder.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

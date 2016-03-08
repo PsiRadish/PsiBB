@@ -9,14 +9,30 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace PsiBB.Models
 {
     [BsonIgnoreExtraElements]
-    public class User : DataAccess.MongoModel
+    public class User : DataAccess.MongoModel<User>
     {
-        [Required]
-        public string Email { get; set; }
+        public User()
+        {
+        }
+        public User(string displayName, string email)
+        {
+            DisplayName = displayName;
+            Email = email;
+        }
 
         [Required]
         public string DisplayName { get; set; }
 
-        public DateTime DateJoined { get; set; }
+        [Required]
+        public string Email { get; set; }
+        
+        [BsonIgnore]
+        public DateTime DateJoined
+        {
+            get
+            {
+                return this.DateCreated;
+            }
+        }
     }
 }

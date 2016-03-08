@@ -21,12 +21,12 @@ namespace PsiBB.DataAccess
         /// <c>bool success = await repo.Add("56cd35159d2feb7ef4100e59", e => e.Prescriptions, "cowbell");</c>
         /// </summary>
         /// <typeparam name="TItem">The type of the added item.</typeparam>
-        /// <param name="id">Unique id of record containing list field.</param>
+        /// <param name="id">Unique id of record containing the list field.</param>
         /// <param name="listField">One of those LINQ lambda expressions indicating the field to be added to.</param>
         /// <param name="itemValue">The new item to be added.</param>
         /// <returns>Whether the operation was successful.</returns>
         /// <example><code>bool success = await repo.Add("56cd35159d2feb7ef4100e59", e => e.Prescriptions, "cowbell");</code></example>
-        Task<bool> Add<TItem>(string id, Expression<Func<TModel, IEnumerable<TItem>>> listField, TItem itemValue);
+        Task<bool> Add<TItem>(string id, Expression<Func<TModel, IEnumerable<TItem>>> listField, TItem itemValue) where TItem : IHasTimestamps;
         Task<bool> FullUpdate(TModel model);
     }
 }

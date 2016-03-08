@@ -4,5 +4,4 @@
     ? This might be "evil".  Care?
 ? How much info does app get on validation failure?
 ? Implement associations using C# attributes?
-  • Attribute(s) should also indicate what NOT to save to the database (so full user profile data doesn't get duplicated into every post they make, for instance)
-    (Seems like a thing that might be built-in, look for it)
+  • Use [BsonIgnore] for properties that should NOT to save to the database
