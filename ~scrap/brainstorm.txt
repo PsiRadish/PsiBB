@@ -1,7 +1,33 @@
 
-? Modify (I)SpeakerRepository from https://github.com/spboyer/mongomvc into a general ORM of sorts that can work with any model using generics.
-  • For `name` parameter of IMongoDatabase.GetCollection, add static field `CollectionName` to all models (make an interface?) and access with: typeof(T).GetField("CollectionName")
-    ? This might be "evil".  Care?
-? How much info does app get on validation failure?
-? Implement associations using C# attributes?
-  • Use [BsonIgnore] for properties that should NOT to save to the database
+? How much info does app receive on validation failure?
+  
+  
+ROUTE PLAN (TENTATIVE)
+  Verb      Route                               Result                              Notes
+            
+• Root
+  GET       / and /index                        Index of message board sections
+                                                (and subsections?)
+    
+• Section   
+  GET       /section                            404
+  GET       /section/{section id)}              Index of topics in section
+                                                (and subsections?)
+  GET       /section/new                        Admin: New section form
+  POST      /section                            Admin: Submit new section
+  GET       /section/{section id)}/edit         Admin: Section edit form
+    
+    
+• Topic
+  GET       /topic                              404
+  GET       /topic/{topic id}                   Page 1 of topic
+  GET       /topic/{topic id}/page{#}           Page whatever of topic
+  GET       /topic/new                          New topic + first post form
+  POST      /topic                              Submit new topic + first post
+  DELETE    /topic/{topic id}                   Delete topic
+  GET       /topic/{topic id}/reply?q={index}   New post form                       q = index of other post to quote, if any.
+  PATCH     /topic/{topic id}                   Submit new post
+  GET       /topic/{topic id}/edit?p={index}    Form to edit post at index          p = index of post to edit; if 0, form also has fields to edit topic (probably just title)
+                                                 in topic
+  PUT       /topic/{topic id}/{index}           Submit edited post
+  DELETE    /topic/{topic id}/{index}           Delete post

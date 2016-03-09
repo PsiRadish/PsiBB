@@ -10,7 +10,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace PsiBB.Models
 {
     [BsonIgnoreExtraElements]
-    public class Topic : DataAccess.MongoDoc
+    public class Topic : DataAccess.MongoModel<Topic>
     {
         [Required]
         public ObjectId AuthorId { get; set; }

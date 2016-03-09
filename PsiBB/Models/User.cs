@@ -11,18 +11,9 @@ namespace PsiBB.Models
     [BsonIgnoreExtraElements]
     public class User : DataAccess.MongoModel<User>
     {
-        public User()
-        {
-        }
-        public User(string displayName, string email)
-        {
-            DisplayName = displayName;
-            Email = email;
-        }
-
         [Required]
         public string DisplayName { get; set; }
-
+        
         [Required]
         public string Email { get; set; }
         

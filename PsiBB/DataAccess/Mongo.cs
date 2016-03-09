@@ -14,9 +14,10 @@ using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 
-namespace PsiBB.DataAccess
+namespace PsiBB.DataAccess // TODO: Chagne to PsiBB.DataAccess.Mongo and remove "Mongo" prefix from class names within
 {
-    public abstract class Mongo
+    //[attributeLOL]
+    public abstract class Mongo // TODO: Rename "Master" after changing namespace above
     {
         protected static readonly IMongoDatabase __database;
         
@@ -29,6 +30,11 @@ namespace PsiBB.DataAccess
             __database = (new MongoClient(connectionString)).GetDatabase(databaseName);
         }
         
+        /// <summary>
+        /// Generates the MongoDB collection name for models of the passed type.
+        /// </summary>
+        /// <param name="type">Type of model to generate the collection name for.</param>
+        /// <returns>The pluralized name of <code>type</code>.</returns>
         public static string GenerateCollectionName(Type type)
         {
             return PluralizationService.CreateService(new CultureInfo("en-US")).Pluralize(type.Name); // TODO: move "en-US" to config with a name like "pluralCulture"
@@ -40,38 +46,20 @@ namespace PsiBB.DataAccess
     {
         [BsonElement("DateCreated")]
         protected BsonDateTime _dateCreated = new BsonDateTime(0);
-        // private BsonTimestamp _dateCreated = new BsonTimestamp(0);
         [BsonElement("DateModified")]
         protected BsonDateTime _dateModified = new BsonDateTime(0);
-        // private BsonTimestamp _dateModified = new BsonTimestamp(0);
         
         [BsonIgnore]
         public DateTime DateCreated
         {
-            get
-            {
-                return _dateCreated.ToUniversalTime();
-                // return Constants.UnixEpoch.AddSeconds(_dateCreated.Timestamp);
-            }
-            set
-            {
-                _dateCreated = value;
-                // _dateCreated = new BsonTimestamp(Convert.ToInt32((value - Constants.UnixEpoch).TotalSeconds), _dateCreated.Increment);
-            }
+            get { return _dateCreated.ToUniversalTime(); }
+            set { _dateCreated = value; }
         }
         [BsonIgnore]
         public DateTime DateModified
         {
-            get
-            {
-                return _dateModified.ToUniversalTime();
-                // return Constants.UnixEpoch.AddSeconds(_dateModified.Timestamp);
-            }
-            set
-            {
-                _dateModified = value;
-                // _dateModified = new BsonTimestamp(Convert.ToInt32((value - Constants.UnixEpoch).TotalSeconds), _dateModified.Increment);
-            }
+            get { return _dateModified.ToUniversalTime(); }
+            set { _dateModified = value; }
         }
     }
     
@@ -96,10 +84,9 @@ namespace PsiBB.DataAccess
             DateTime now = DateTime.Now;
             this.DateModified = now;
             this.Parent.DateModified = now;
-
+            
             string embeddedFieldDefPrefix = this.ListName + "." + this.Index + ".";
-
-            // var parentCollection = DataAccess.Layer.GetCollection<TParentModel>();
+            
             // var parentCollection = __database.GetCollection<TParentModel>(GenerateCollectionName(typeof(TParentModel)));
             var parentCollection = MongoModel<TParentModel>.Collection;
             
@@ -152,7 +139,7 @@ namespace PsiBB.DataAccess
         /// <summary>
         /// Retrieves a mongo collection of TModel documents.
         /// </summary>
-        public static IMongoCollection<TModel> Collection
+        public static IMongoCollection<TModel> Collection  // <----------- THIS NEEDS THE CHANGE COLOR
         {
             get { return _collection; }
         }
@@ -218,11 +205,11 @@ namespace PsiBB.DataAccess
             this.DateModified = now;
             itemValue.DateCreated = now;
             itemValue.DateModified = now;
-
+            
             itemValue.Parent = this;
             itemValue.ListName = listFieldName;
             itemValue.Index = listField.Count;
-
+            
             var query = Builders<TModel>.Filter.Eq(e => e.Id, this.Id);
             var update = Builders<TModel>.Update.Set("DateModified", this._dateModified).Push(listFieldName, itemValue);
             
@@ -238,8 +225,8 @@ namespace PsiBB.DataAccess
             return success;
         }
         
-        // Full replacement of model in database
-        public async Task<bool> FullUpdate()
+        // Update
+        public async Task<bool> Update()
         {
             this.DateModified = DateTime.Now; // update modified time
             
@@ -258,7 +245,23 @@ namespace PsiBB.DataAccess
         }
         public void EndInit()
         {
-            System.Diagnostics.Debug.Print(this.GetType().Name + " deserialized!");
+            // System.Diagnostics.Debug.Print(this.GetType().Name + " deserialized!");
+            
+            foreach(var propInfo in this.GetType().GetProperties())
+            {   // search for lists of MongoListElements
+                if (typeof(IEnumerable<MongoListElement>).IsAssignableFrom(propInfo.PropertyType))
+                {   // found one
+                    var mongoList = (IList<MongoListElement>)propInfo.GetValue(this);
+
+                    // loop through and set convenience properties
+                    for (int i = 0; i < mongoList.Count; i++)  // foreach (var listPair in mongoList.Select((item, index) => new {item, index}))
+                    {
+                        mongoList[i].Parent = this;
+                        mongoList[i].ListName = propInfo.Name;
+                        mongoList[i].Index = i; // listPair.index;
+                    }
+                }
+            }
         }
     }
 }
