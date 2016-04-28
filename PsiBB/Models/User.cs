@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson.Serialization.Attributes;
@@ -16,7 +13,8 @@ namespace PsiBB.Models
         
         [Required]
         public string Email { get; set; }
-        
+
+        // Just another name for DateCreated property.
         [BsonIgnore]
         public DateTime DateJoined
         {

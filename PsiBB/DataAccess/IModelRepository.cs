@@ -7,7 +7,7 @@ using System.Web;
 using System.Threading.Tasks;
 
 namespace PsiBB.DataAccess
-{   // TODO: Add Async to end of method names?
+{   // TODO?: Add Async to end of method names?
     public interface IModelRepository<TModel>
     {
         Task<IEnumerable<TModel>> GetAll();

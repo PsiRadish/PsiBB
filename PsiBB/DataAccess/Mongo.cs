@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Web;
 using System.Configuration;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
@@ -14,10 +11,9 @@ using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 
-namespace PsiBB.DataAccess // TODO: Chagne to PsiBB.DataAccess.Mongo and remove "Mongo" prefix from class names within
+namespace PsiBB.DataAccess // TODO: Change to PsiBB.DataAccess.Mongo and remove "Mongo" prefix from class names within
 {
-    //[attributeLOL]
-    public abstract class Mongo // TODO: Rename "Master" after changing namespace above
+    public abstract class Mongo // TODO: Rename "Base" after changing namespace above
     {
         protected static readonly IMongoDatabase __database;
         
@@ -62,8 +58,10 @@ namespace PsiBB.DataAccess // TODO: Chagne to PsiBB.DataAccess.Mongo and remove 
             set { _dateModified = value; }
         }
     }
-    
-    // MongoElement with Index property for use in embedded list items.
+
+    /// <summary>
+    /// MongoElement with Index property for use in embedded list items.
+    /// </summary>
     public abstract class MongoListElement : MongoElement
     {
         // TODO: Populate these fields in MongoDoc.EndInit()
@@ -136,10 +134,11 @@ namespace PsiBB.DataAccess // TODO: Chagne to PsiBB.DataAccess.Mongo and remove 
             
             _collection = __database.GetCollection<TModel>(collectionName);
         }
+
         /// <summary>
-        /// Retrieves a mongo collection of TModel documents.
+        /// The MongoDB collection for this model.
         /// </summary>
-        public static IMongoCollection<TModel> Collection  // <----------- THIS NEEDS THE CHANGE COLOR
+        public static IMongoCollection<TModel> Collection
         {
             get { return _collection; }
         }
@@ -159,7 +158,7 @@ namespace PsiBB.DataAccess // TODO: Chagne to PsiBB.DataAccess.Mongo and remove 
         }
         
         /// <summary>
-        /// Returns `<c>this</c>` with the requisite typecasts applied so it can be passed to the MongoDB driver.
+        /// Returns this instance with the requisite typecasts applied so it can be passed to the MongoDB driver.
         /// </summary>
         private TModel _T
         {
@@ -225,8 +224,11 @@ namespace PsiBB.DataAccess // TODO: Chagne to PsiBB.DataAccess.Mongo and remove 
             return success;
         }
         
-        // Update
-        public async Task<bool> Update()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<bool> Replace()
         {
             this.DateModified = DateTime.Now; // update modified time
             
