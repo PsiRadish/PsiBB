@@ -14,7 +14,6 @@ namespace PsiBB.Controllers
     public class HomeController : AsyncController
     {
         // GET: Home
-        // public ActionResult Index()
         public async Task<ActionResult> IndexAsync()
         {
             ViewBag.Message = "Congratulations!";
@@ -27,17 +26,5 @@ namespace PsiBB.Controllers
             
             return View();
         }
-        
-        /*private string anonyTest(object fields)
-        {
-            string returnString = "anonyTestinggggggg!\n";
-            
-            foreach (var property in fields.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public))
-            {
-                returnString += String.Format("Name: {0}, Value: {1}", property.Name, property.GetValue(fields, null)) + '\n';
-            }
-            
-            return returnString;
-        }*/
     }
 }
