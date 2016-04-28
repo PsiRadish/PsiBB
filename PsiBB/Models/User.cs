@@ -2,11 +2,12 @@
 using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson.Serialization.Attributes;
+using PsiBB.DataAccess.Mongo;
 
 namespace PsiBB.Models
 {
     [BsonIgnoreExtraElements]
-    public class User : DataAccess.MongoModel<User>
+    public class User : Mongo.Model<User>
     {
         [Required]
         public string DisplayName { get; set; }

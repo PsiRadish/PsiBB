@@ -19,11 +19,8 @@ namespace PsiBB.Controllers
             ViewBag.Message = "Congratulations!";
             // ViewBag.Message = CultureInfo.CurrentCulture.Name;
             
-            var userRepo = DataAccess.Layer.GetRepository<Models.User>();
-            
-            ViewBag.UsersJSON = (await userRepo.GetAll()).ToJson(new JsonWriterSettings { Indent = true });
-            // ViewBag.UsersJSON = anonyTest(new { oneFish = "red", twoFish = "blue" });
-            
+            ViewBag.UsersJSON = (await Models.User.GetAllAsync()).ToJson(new JsonWriterSettings { Indent = true });
+
             return View();
         }
     }

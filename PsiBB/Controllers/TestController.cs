@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace PsiBB.Controllers
 {
-    public abstract class Toolbox
+    /*public abstract class Toolbox
     {
         public static string WordFinder2(Random rnd)
         {
@@ -42,67 +42,45 @@ namespace PsiBB.Controllers
         {
             return letters[rnd.Next(0, letters.Length - 1)];
         }
-    }
+    }*/
     
-    // public static class Eastman
-    // {
-    //     public static Random Rando = new Random();
-    // }
+    /*public static class Eastman
+    {
+        public static Random Rando = new Random();
+    }*/
     
-    // public abstract class Stateric<T>
-    // {
-    //     public static int Amazing = Eastman.Rando.Next();
+    /*public abstract class Stateric<T>
+    {
+        public static int Amazing = Eastman.Rando.Next();
         
-    //     public static string WhatYouSay
-    //     {
-    //         get
-    //         {
-    //             return typeof(T).Name;
-    //         }
-    //     }
-    // }
+        public static string WhatYouSay
+        {
+            get
+            {
+                return typeof(T).Name;
+            }
+        }
+    }*/
     
     public class TestController : AsyncController
     {
         // GET: Test
         public async Task<ActionResult> IndexAsync()
         {
-            // var userRepo = DataAccess.Layer.GetRepository<Models.User>();
-            
             // Random rnd = new Random();
-            // await Task.WhenAll(userRepo.Create(new Models.User { DisplayName="Spartacus", Email=Toolbox.WordFinder2(rnd)+"@"+Toolbox.WordFinder2(rnd)+".net" }),
-            //                     userRepo.Create(new Models.User { DisplayName="Spartacus", Email=Toolbox.WordFinder2(rnd)+"@"+Toolbox.WordFinder2(rnd)+".com" }));
-            // await Task.WhenAll((new Models.User { DisplayName="Spartacus", Email=Toolbox.WordFinder2(rnd)+"@"+Toolbox.WordFinder2(rnd)+".net" }).Create(),
-            //                    (new Models.User { DisplayName="Spartacus", Email=Toolbox.WordFinder2(rnd)+"@"+Toolbox.WordFinder2(rnd)+".com" }).Create());
+            // await Task.WhenAll((new Models.User { DisplayName="Spartacus", Email=Toolbox.WordFinder2(rnd)+"@"+Toolbox.WordFinder2(rnd)+".net" }).CreateAsync(),
+            //                    (new Models.User { DisplayName="Spartacus", Email=Toolbox.WordFinder2(rnd)+"@"+Toolbox.WordFinder2(rnd)+".com" }).CreateAsync());
             
-            // ViewBag.TestOutput = (await userRepo.GetAll()).ToJson(new JsonWriterSettings { Indent = true });
-            // ViewBag.TestOutput = (await DataAccess.MongoModel<Models.User>.GetAll()).ToJson(new JsonWriterSettings { Indent = true });
+            // ViewBag.TestOutput = (await Models.User.GetAllAsync()).ToJson(new JsonWriterSettings { Indent = true });
             
-            // System.Diagnostics.Debug.Print(Stateric<string>.WhatYouSay);
-            // System.Diagnostics.Debug.Print(Stateric<Hashtable>.WhatYouSay);
-            // var amazeString = Stateric<string>.Amazing;
-            // var amazeHashtable = Stateric<Hashtable>.Amazing;
-            // System.Diagnostics.Debug.Print(amazeString.ToString(), "Stateric<string>.Amazing from var");
-            // System.Diagnostics.Debug.Print(Stateric<string>.Amazing.ToString(), "Stateric<string>.Amazing live");
-            // System.Diagnostics.Debug.Print(amazeHashtable.ToString(), "Stateric<Hashtable>.Amazing from var");
-            // System.Diagnostics.Debug.Print(Stateric<Hashtable>.Amazing.ToString(), "Stateric<Hashtable>.Amazing live");
+            var nonyNony = new { Nummer = 10, Strang = "Fluffy" };
+            ViewBag.TestOutput = nonyNony.GetType().ToString();
             
-            //var topicRepo = DataAccess.Layer.GetRepository<Models.Topic>();
-            //await topicRepo.Add("somebloodyid", e => e.Posts, new Models.Topic.Post());
+            // var topic = new Models.Topic();
+            // var postsProp = (typeof (Models.Topic)).GetProperty("Posts");
+            // var testProp = (typeof(Models.Topic)).GetProperty("TEST");
             
-            var topic = new Models.Topic();
-            var postsProp = (typeof (Models.Topic)).GetProperty("Posts");
-            var testProp = (typeof(Models.Topic)).GetProperty("TEST");
-
-            // var mongoListElementType = typeof(List<DataAccess.MongoListElement>).GetGenericArguments()[0];
-            // var mongoListElementType = typeof(DataAccess.MongoListElement);
-            // var postsElementType = postsProp.PropertyType.GetGenericArguments()[0];
-
-            //IEnumerable<DataAccess.MongoListElement> list = topic.Posts;
-
-            ViewBag.TestOutput = String.Format("{0}   {1}", typeof(IEnumerable<DataAccess.MongoListElement>).IsAssignableFrom(postsProp.PropertyType), typeof(IEnumerable<DataAccess.MongoListElement>).IsAssignableFrom(testProp.PropertyType));
-            //ViewBag.TestOutput = String.Join(", ", postsProp.PropertyType.GetInterfaces().Select(x => x.ToString()).ToArray()) + '\n' + typeof(IList<DataAccess.MongoListElement>).ToString();
-            //ViewBag.TestOutput = String.Format("{0}   {1}   {2}", mongoListElementType, postsElementType, postsElementType.IsSubclassOf(mongoListElementType));
+            // ViewBag.TestOutput = String.Format("{0}   {1}", typeof(IEnumerable<DataAccess.MongoListElement>).IsAssignableFrom(postsProp.PropertyType), typeof(IEnumerable<DataAccess.MongoListElement>).IsAssignableFrom(testProp.PropertyType));
             
             return View();
         }

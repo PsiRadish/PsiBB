@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson.Serialization.Attributes;
+using PsiBB.DataAccess.Mongo;
 
 namespace PsiBB.Models
 {
     [BsonIgnoreExtraElements]
-    public class Topic : DataAccess.MongoModel<Topic>
+    public class Topic : Mongo.Model<Topic>
     {
         [Required]
         public ObjectId AuthorId { get; set; }
@@ -24,7 +25,7 @@ namespace PsiBB.Models
         [Required]
         public string Title { get; set; }
 
-        public class Post : DataAccess.MongoListElement
+        public class Post : Mongo.EmbeddedListElement
         {
             [Required]
             public ObjectId AuthorId { get; set; }
