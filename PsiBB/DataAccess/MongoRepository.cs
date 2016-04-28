@@ -26,16 +26,6 @@ namespace PsiBB.DataAccess
             string databaseName = ConfigurationManager.AppSettings["databaseName"];
             string connectionString = ConfigurationManager.ConnectionStrings[databaseName].ConnectionString;
             
-            /*// class map alternative to BsonElement attributes in MongoDoc definition
-            BsonClassMap.RegisterClassMap<MongoDoc>(cm =>
-            {
-                cm.AutoMap();
-                // cm.MapMember(c => c._dateCreated).SetElementName("DateCreated");
-                cm.MapField("_dateCreated").SetElementName("DateCreated");
-                // cm.MapMember(c => c._dateModified).SetElementName("DateModified");
-                cm.MapField("_dateModified").SetElementName("DateModified");
-            });*/
-            
             __database = (new MongoClient(connectionString)).GetDatabase(databaseName);
         }
         
@@ -97,7 +87,7 @@ namespace PsiBB.DataAccess
             // return await _collection.Find(doc => doc.Id == id).FirstOrDefaultAsync();
         }
         
-        // public bool Remove(TModel model)
+        // Remove
         public async Task<bool> Remove(string id)
         {
             ObjectId oId = new ObjectId(id);
@@ -109,8 +99,17 @@ namespace PsiBB.DataAccess
             
             return result.IsAcknowledged && result.DeletedCount == 1;
         }
-        
-        // Add
+
+        /// <summary>
+        /// Adds an item to a list of embedded documents.
+        /// Example: <c>bool success = await repo.Add("56cd35159d2feb7ef4100e59", e => e.Prescriptions, "cowbell");</c>
+        /// </summary>
+        /// <typeparam name="TItem">The type of the list item.</typeparam>
+        /// <param name="id">Unique id of record containing the list field.</param>
+        /// <param name="listField">LINQ/lambda expression indicating the field to be added to.</param>
+        /// <param name="itemValue">List item object to add.</param>
+        /// <returns>Task that returns whether operation was successful (boolean).</returns>
+        /// <example><code>bool success = await repo.Add("56cd35159d2feb7ef4100e59", e => e.Prescriptions, "cowbell");</code></example>
         public async Task<bool> Add<TItem>(string id, Expression<Func<TModel, IEnumerable<TItem>>> listField, TItem itemValue) where TItem : IHasTimestamps
         {
             ObjectId oId = new ObjectId(id);
@@ -127,8 +126,13 @@ namespace PsiBB.DataAccess
             
             return result.IsAcknowledged && ((!result.IsModifiedCountAvailable && result.MatchedCount == 1) || result.ModifiedCount == 1);
         }
-        // Full replacement of model in database
-        public async Task<bool> FullUpdate(TModel model)
+
+        /// <summary>
+        /// Full replacement of model in database
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Task that returns whether operation was successful (boolean).</returns>
+        public async Task<bool> Replace(TModel model)
         {
             var query = Builders<TModel>.Filter.Eq(e => e.Id, model.Id);
             
