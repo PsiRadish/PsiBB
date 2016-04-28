@@ -113,11 +113,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OMGController.cs" />
     <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="DataAccess\IHasTimestamps.cs" />
-    <Compile Include="DataAccess\Layer.cs" />
     <Compile Include="DataAccess\Mongo.cs" />
-    <Compile Include="DataAccess\IModelRepository.cs" />
-    <Compile Include="DataAccess\MongoRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
