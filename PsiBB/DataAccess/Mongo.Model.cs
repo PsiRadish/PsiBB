@@ -24,7 +24,6 @@ namespace PsiBB.DataAccess.Mongo
         public abstract class Model<TModel> : Document, ISupportInitialize where TModel : Document
         {
             private static readonly IMongoCollection<TModel> _collection;
-
             static Model()
             {
                 // pluralize class name to get MongoDB collection name
@@ -55,6 +54,10 @@ namespace PsiBB.DataAccess.Mongo
                 return await _collection.Find(query).FirstOrDefaultAsync();
             }
 
+			/// <summary>
+            /// Get all documents in the collection.
+            /// </summary>
+            /// <returns>List of all documents in the collection.</returns>
             public static async Task<IEnumerable<TModel>> GetAllAsync()
             {
                 return await _collection.Find(new BsonDocument()).ToListAsync();
@@ -71,7 +74,10 @@ namespace PsiBB.DataAccess.Mongo
                 }
             }
 
-            public async Task CreateAsync()
+            /// <summary>
+            /// Adds this model instance to the database as a new document.
+            /// </summary>
+            public async Task CreateAsync() // TODO: change return type to Task<bool> for returning success/fail
             {
                 DateTime now = DateTime.Now;
                 this.DateCreated = now;
@@ -91,7 +97,7 @@ namespace PsiBB.DataAccess.Mongo
             /// <summary>
             /// Remove this document from the database.
             /// </summary>
-            /// <returns>Whether operation was successful (boolean).</returns>
+            /// <returns>Whether operation was successful.</returns>
             public async Task<bool> RemoveAsync()
             {
                 var query = Builders<TModel>.Filter.Eq(e => e.Id, this.Id);
@@ -102,7 +108,13 @@ namespace PsiBB.DataAccess.Mongo
                 return result.IsAcknowledged && result.DeletedCount == 1;
             }
 
-            // Add
+            /// <summary>
+            /// Adds an item to a list of embedded documents.
+            /// </summary>
+            /// <typeparam name="TItem">The type of the list item.</typeparam>
+            /// <param name="listFieldName">Name of the list field to add to.</param>
+            /// <param name="itemValue">List item object to add.</param>
+            /// <returns>Whether operation was successful.</returns>
             public async Task<bool> AddAsync<TItem>(string listFieldName, TItem itemValue) where TItem : EmbeddedListElement    // Expression<Func<TModel, IEnumerable<TItem>>> listFieldName
             {
                 IList<TItem> listField = (IList<TItem>)this.GetType().GetProperty(listFieldName).GetValue(this);
@@ -131,9 +143,9 @@ namespace PsiBB.DataAccess.Mongo
             }
 
             /// <summary>
-            /// 
+            /// Fully replaces document in database with data from this model instance.
             /// </summary>
-            /// <returns>Whether operation was successful (boolean).</returns>
+            /// <returns>Whether operation was successful.</returns>
             public async Task<bool> ReplaceAsync()
             {
                 this.DateModified = DateTime.Now; // update modified time
