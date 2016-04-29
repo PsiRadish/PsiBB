@@ -2,15 +2,17 @@
 <html>
   <head>
     <title>@System.Configuration.ConfigurationManager.AppSettings["boardName"] – @ViewBag.Title</title>
-    <link href='@Url.Content("~/Public/css/PsiBB.css")' rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href='@Url.Content("~/Public/css/PsiBB.css")'/>
     <script src="//code.jquery.com/jquery.min.js"></script>
   </head>
   <body>
-    <div class="page">
+    <div class="page container-fluid">
       <nav id="menu-bar">
         <ul class="menu">
           <li>@Html.ActionLink("Home", "Index", "Home")</li>
           <li>@Html.ActionLink("OMG", "Index", "OMG")</li>
+          <li>@Html.ActionLink("Test", "Index", "Test")</li>
         </ul>
       </nav>
       <div id="header">
@@ -26,8 +28,8 @@
         @RenderBody()
       </main>
       
-      <div id="footer">
-      </div>
+      @* <div id="footer">
+      </div> *@
     </div>
   </body>
 </html>
