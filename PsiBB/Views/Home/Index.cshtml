@@ -10,6 +10,14 @@
 <p>
     You've found where the heart is.
 </p>
+
+@if (ViewBag.CreatedUserMessage != null)
+{
+<p>
+  @ViewBag.CreatedUserMessage
+</p>
+}
+
 <pre>@ViewBag.UsersJSON</pre>
 
 @* @if (ViewBag)
