@@ -130,6 +130,7 @@
     <Content Include="Views\OMG\Index.cshtml" />
     <Content Include="Views\OMG\Louder.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Compile Include="DataAccess\Mongo.Model.cs" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
